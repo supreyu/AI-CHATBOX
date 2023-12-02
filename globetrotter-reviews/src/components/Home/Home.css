@@ -1,0 +1,88 @@
+/* Home.css */
+.home-container {
+  max-width: 1200px; /* Adjust the width as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-content h1 {
+  color: #333; /* Replace with the color from your design */
+  margin-bottom: 30px; /* Adjust space as per your design */
+}
+
+.activity-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr); /* 等宽列 */
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.recommended-book {
+  background-color: #f5f5f5; /* Replace with the actual color from your design */
+  padding: 20px;
+  border-radius: 8px; /* Adjust radius as per your design */
+  margin-bottom: 30px;
+  text-align: center; /* Aligns the text and button */
+}
+
+.recommended-book h2 {
+  color: #333; /* Replace with the color from your design */
+  margin-bottom: 20px;
+}
+
+.book-quote {
+  color: #666; /* Replace with the color from your design */
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+
+/* Add responsive design adjustments if necessary */
+@media (max-width: 768px) {
+  .activity-section {
+    grid-template-columns: 1fr; /* 小屏幕上堆叠 */
+  }
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column; /* 垂直排列内容 */
+  justify-content: space-between; /* 垂直间距均匀 */
+  border: 1px solid #ddd;
+  padding: 20px;
+  padding-bottom: 60px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  position: relative; /* 添加相对定位 */
+}
+
+.activity-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+
+/*按钮放这里*/
+.learn-more-btn {
+  /* your existing styles */
+  background-color: #008cba; /* Replace with button color from your design */
+  color: #ffffff; /* Adjust text color as needed */
+  padding: 10px 20px; /* 调整按钮内边距 */
+  text-decoration: none;
+  border: none;
+  border-radius: 4px; /* Adjust radius as per your design */
+  cursor: pointer;
+  position: absolute; /* 添加绝对定位 */
+  bottom: 10px; /* 距离底部的距离 */
+  left: 50%; /* 放置在中间 */
+  transform: translateX(-50%); /* 水平居中 */
+  margin-top: 10px; /* 间距 */
+}
+
+.learn-more-btn:hover {
+  background-color: #468F42; /* Green color on hover */
+}

@@ -1,0 +1,107 @@
+/* NavBar.css */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 15px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: #ccc;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc; /* 添加底部边框效果 */
+  background-color: transparent; /* 使搜索框透明底 */
+  width: 200px; /* 设置搜索框宽度 */
+  font-size: 16px;
+  outline: none; /* 移除输入框的默认外边框 */
+}
+
+/* 美化输入框的 placeholder（占位文本） */
+.search-bar input::placeholder {
+  color: #999;
+}
+
+/* 移除搜索按钮的默认外边框 */
+.search-bar button:focus {
+  outline: none;
+}
+
+/* 调整搜索框和搜索按钮的间距 */
+.search-bar input {
+  margin-right: 10px; /* 为按钮留出右边距 */
+}
+
+.search-btn {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 0; /* 移除按钮的内边距 */
+  width: 60px; /* 设置按钮宽度 */
+  height: 35px; /* 设置按钮高度与搜索框一样 */
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 60px;
+}
+
+.search-btn:hover {
+  background-color: #555;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* 修改登录和注册按钮样式 */
+.login-btn, .register-btn {
+  background-color: #d77e7e; /* 设置按钮背景颜色为莫兰迪色 */
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; /* 保留一定的右边距 */
+  border-radius: 10px; /* 圆滑按钮 */
+}
+
+.login-btn:hover, .register-btn:hover {
+  background-color: #c66464; /* 悬浮时更改背景颜色为莫兰迪色的变体 */
+}
+

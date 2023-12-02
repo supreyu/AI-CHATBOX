@@ -1,0 +1,54 @@
+/* AuthorList.css */
+.author-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 40px; /* 添加内边距，不顶头顶尾 */
+  padding-top: 60px;
+}
+
+
+/* 设置正方形方框的宽度和高度 */
+.author-box {
+  width: calc(33.33% - 20px); /* 使每个框占据整个宽度的1/3，并留有一定间隔 */
+  margin-bottom: 20px; /* 底部添加间隔 */
+  height: 200px; /* 设置正方形的高度 */
+  box-sizing: border-box; /* 让内边距不影响元素的实际宽度 */
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+  margin-left: 10px; /* 添加左边间隙 */
+  margin-right: 10px; /* 添加右边间隙 */
+}
+
+
+.author-box:hover {
+  transform: translateY(-5px);
+}
+
+.author-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.author-info {
+  color: #666;
+}
+
+/* 添加不同的背景颜色 */
+.author-box:nth-child(3n+1) {
+  background-color: 	#A9CCE3; /* Yellow */
+}
+
+.author-box:nth-child(3n+2) {
+  background-color: #A9DFBF; /* Orange */
+}
+
+.author-box:nth-child(3n+3) {
+  background-color: #CCD1D1 ; /* Red */
+}

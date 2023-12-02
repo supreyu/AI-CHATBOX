@@ -1,0 +1,52 @@
+/* Addbook.css */
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input[type="text"],
+  form input[type="url"],
+  form textarea,
+  form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  form textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  form button {
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #3f51b5;
+  }
+  
+  /* 如果你希望当输入框聚焦时有一个不同的边框颜色 */
+  form input[type="text"]:focus,
+  form input[type="url"]:focus,
+  form textarea:focus {
+    border-color: #5c6bc0;
+    outline: none;
+  }
+  
+  /* 针对表单验证错误的样式，如果你添加了验证逻辑 */
+  .error-message {
+    color: red;
+    margin-bottom: 1rem;
+  }
+  
