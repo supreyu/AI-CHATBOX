@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-
+import ChatInterface from '../ChatInterface/ChatInterface';
+import { Link } from 'react-router-dom';
+import Classify from '../Classify/Classify';
 const Home = () => {
   const [activities, setActivities] = useState([]);
 
@@ -23,23 +25,25 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="main-content">
-        <h1>Latest activity</h1>
+        <h1>Commodity Classification</h1>
         <div className="activity-section">
-          {/* 确保这里的activities已经定义并且包含了你的活动数据 */}
           {activities.map((activity) => (
             <div key={activity.id} className="activity-card">
               <img src={activity.image_url} alt={activity.title} />
               <h2>{activity.title}</h2>
               <p>{activity.description}</p>
-              <a href="/activity-link" className="learn-more-btn">LEARN MORE</a>
+              <Link to={`/classify?type=${encodeURIComponent(activity.type)}`} className="learn-more-btn">
+              MORE
+            </Link>
             </div>
           ))}
         </div>
-        <h2>Recommended book</h2>
+        <h2>Recommended goods</h2>
         <div className="recommended-book">
-          <p className="book-quote">"No book in the world can bring you good luck; But they can make you become yourself quietly"</p>
+          <p className="book-quote">"For more product recommendations, please consult customer service at the bottom right corner."</p>
         </div>
       </div>
+      <ChatInterface /> {/* 渲染聊天界面组件 */}
     </div>
   );
 };

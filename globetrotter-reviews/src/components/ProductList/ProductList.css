@@ -1,0 +1,53 @@
+.product-list-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.product {
+  width: 180px; 
+  height: 300px;
+  margin-bottom: 80px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑过渡效果 */
+  border: 1px solid #ddd; 
+  padding: 10px; 
+  background-color: #fff; 
+  text-align: center; 
+}
+
+.product a {
+  text-decoration: none; /* 移除链接下划线 */
+  color: inherit; /* 链接颜色与文本颜色相同 */
+}
+
+.product img {
+  width: 160px; 
+  height: 240px; 
+  object-fit: cover; 
+  border-radius: 4px; 
+  margin-bottom: 10px; 
+}
+
+.product h3 {
+  font-size: 1em;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.2em;
+  height: 2.4em; 
+  word-break: break-word;
+}
+
+.product:hover {
+  transform: scale(1.05); /* 悬停时轻微放大 */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* 悬停时增加阴影 */
+}

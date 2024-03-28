@@ -1,0 +1,79 @@
+/* CommentsList.css */
+.comments-list {
+    width: 80%; 
+    max-width: 1500px; 
+     /* 居中显示，并提供上下边距 */
+    padding: 0;
+    list-style: none;
+  }
+  
+  .comment {
+    background: #f9f9f9; /* 轻微的灰色背景 */
+    border: 1px solid #ddd; /* 边框颜色更轻 */
+    border-radius: 8px; /* 圆角边框 */
+    padding: 20px; /* 内边距增加 */
+    margin-bottom: 15px; /* 增加评论之间的距离 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* 更细微的阴影效果 */
+  }
+  
+  .comment:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 悬停时阴影增强 */
+  }
+  
+  .comment-content {
+    font-size: 18px; /* 增加评论文本的字体大小 */
+    color: #333; /* 深色文本 */
+    margin-bottom: 12px; /* 增加距离信息栏的距离 */
+  }
+  
+  .comment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .comment-user {
+    font-weight: bold;
+    color: #007bff; /* 使用品牌蓝以突出显示用户名 */
+  }
+  
+  .comment-date {
+    color: #999; /* 更淡的字体颜色 */
+  }
+  
+  .delete-comment-button {
+    border: none;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 15px; /* 增加填充以增大按钮 */
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px; /* 适中的字体大小 */
+  }
+  
+  .delete-comment-button:hover {
+    background-color: #c82333; /* 悬停时颜色加深 */
+  }
+  
+  /* 响应式设计，适应不同屏幕大小 */
+  @media (max-width: 768px) {
+    .comments-list {
+      width: 100%; /* 手机屏幕上占满可用宽度 */
+      max-width: none; /* 移除最大宽度限制 */
+    }
+  
+    .comment {
+      padding: 15px; /* 手机屏幕上减少内边距 */
+    }
+  
+    .comment-content {
+      font-size: 16px; /* 手机屏幕上减小字体大小 */
+    }
+  
+    .comment-info {
+      font-size: 13px; /* 手机屏幕上减小信息字体大小 */
+    }
+  }
+  

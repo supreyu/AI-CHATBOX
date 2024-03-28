@@ -1,0 +1,56 @@
+/* SearchResults.css */
+.search-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 将内容左对齐 */
+    margin: 20px; /* 调整边距以适应搜索结果的布局 */
+    padding: 20px;
+  }
+  
+  .search-result-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%; /* 让封面和信息占满容器宽度 */
+    margin-bottom: 20px; /* 搜索结果之间的间隙 */
+    background-color: #f8f8f8; /* 轻微背景色区分 */
+    padding: 20px; /* 内边距 */
+    border-radius: 8px; /* 轻微圆角 */
+  }
+  
+  .search-result-cover {
+    width: 200px; /* 封面图片宽度 */
+    height: auto; /* 高度自适应 */
+    border-radius: 5px; /* 图片轻微圆角 */
+  }
+  
+  .search-result-info {
+    flex: 1;
+  }
+  
+  .search-result-actions {
+    display: flex;
+    margin-top: 10px; /* 将按钮与信息部分稍微分开 */
+  }
+  
+  .search-result-actions .button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 0 10px; /* 左右外边距为10px */
+  }
+  
+  .search-result-actions .button:first-child {
+    margin-right: 10px; /* 仅为第一个按钮设置右边距 */
+  }
+  
+  .search-result-actions .button:last-child {
+    margin-left: 10px; /* 仅为最后一个按钮设置左边距 */
+  }
+  
+  /* 如果你的搜索结果也有评论或其他额外信息的部分，你可以添加更多样式 */
+  

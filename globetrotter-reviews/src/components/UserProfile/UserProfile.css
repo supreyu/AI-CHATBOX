@@ -1,9 +1,59 @@
 /* UserProfile.css */
 .user-profile-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-profile-container h1 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.user-profile-detail {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.user-profile-detail strong {
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 1rem;
+  border: none;
+  background-color: #5cb85c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #449d44;
+}
+
+/* 添加响应式设计，以更好地适应不同屏幕尺寸 */
+@media (max-width: 768px) {
+  .user-profile-container {
+    padding: 1rem;
   }
-  
-  /* 添加其他样式以适应你的设计需求 */
-  
+
+  .user-profile-detail {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}

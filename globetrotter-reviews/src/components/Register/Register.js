@@ -1,17 +1,17 @@
-// Register.js
+
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // 导入useNavigate钩子
+import { useNavigate } from 'react-router-dom'; 
 import './Register.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [successMessage, setSuccessMessage] = useState(''); // 新的状态变量
+  const [successMessage, setSuccessMessage] = useState(''); 
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
-    e.preventDefault(); // 阻止默认的表单提交行为
+    e.preventDefault(); 
 
     try {
       const response = await fetch('/api/register', {
@@ -23,9 +23,9 @@ const Register = () => {
       });
 
       if (response.ok) {
-        setSuccessMessage('Registration successful! Redirecting to login...'); // 设置成功消息
-        // 延迟一段时间后跳转到登录页面
-        setTimeout(() => navigate('/login'), 2000); // 2秒后跳转
+        setSuccessMessage('Registration successful! Redirecting to login...'); // Setting the Success message
+        //After a delay, you are redirected to the login page
+        setTimeout(() => navigate('/login'), 2000); // Jump in 2 seconds
       } else {
         console.error('Registration failed.');
       }

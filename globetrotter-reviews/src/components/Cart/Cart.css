@@ -1,0 +1,86 @@
+.cart-container {
+    width: 100%;
+    max-width: 800px; /* 根据需要调整最大宽度 */
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .cart-item-detail {
+    padding: 10px;
+    flex-grow: 1;
+  }
+  
+  .cart-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .cart-item p {
+    margin: 0;
+  }
+  
+  /* 如果购物车为空 */
+  .empty-cart {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+  }
+  
+  /* 按钮样式 */
+  .cart-container .button {
+    background-color: #4CAF50;
+    color:
+  white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+  
+  .cart-container .button:hover {
+  background-color: #45a049;
+  }
+  
+  /* 响应式设计：在小屏幕上调整布局 */
+  @media (max-width: 600px) {
+  .cart-item {
+  flex-direction: column;
+  align-items: flex-start;
+  }
+  
+  .cart-item-image {
+  width: 100%;
+  height: auto;
+  }
+  
+  .cart-item-detail {
+  padding: 10px;
+  width: 100%;
+  }
+  }

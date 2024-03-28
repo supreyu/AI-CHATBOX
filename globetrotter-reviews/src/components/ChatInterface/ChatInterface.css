@@ -1,0 +1,171 @@
+/* ChatInterface.css */
+.chat-container {
+    transition: all 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .chat-box {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .message {
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+  
+  .message.bot {
+    background-color: #d1e8ff;
+  }
+  
+  .input-area {
+    display: flex;
+    padding: 10px;
+    position: relative; /* 设置相对定位，作为建议框的定位参考 */
+  }
+  
+  /* 输入框样式 */
+  .input-area input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-bottom-left-radius: 0; /* 输入框下边的圆角设置为0 */
+    border-bottom-right-radius: 0; /* 输入框下边的圆角设置为0 */
+  }
+  
+  .input-area button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .input-area button:hover {
+    background-color: #4cae4c;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .close-btn {
+    position: absolute; /* 或者根据需要使用 relative */
+    top: 5px;  /* 调整为合适的位置 */
+    right: 5px; /* 调整为合适的位置 */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* 或者根据需要调整 */
+  }
+  
+  .close-btn:hover {
+    opacity: 0.8;
+  }
+
+  .chat-icon {
+    display: none; /* 默认是隐藏的 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5cb85c; /* 或者您喜欢的颜色 */
+    color: white; /* 图标颜色 */
+    border-radius: 50%;
+    width: 50px; /* 图标大小 */
+    height: 50px; /* 图标大小 */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px; /* 图标大小 */
+    z-index: 1001;
+  }
+  
+  /* 当聊天框隐藏，显示聊天图标 */
+  .hidden + .chat-icon {
+    display: flex;
+  }  
+
+
+  
+/* 自动补全建议的样式 */
+.autocomplete-suggestions {
+  position: absolute;
+  top: 50px; /* 根据实际的输入框高度进行调整 */
+  left: 10px; /* 与输入框的padding值相同 */
+  right: 10px; /* 与输入框的padding值相同，根据按钮的宽度进行调整 */
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* 建议项样式 */
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background-color: #f7f7f7;
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    width: 40%; 
+    bottom: 5px; /* 调整距离底部的距离 */
+    right: 5px; /* 居中显示 */
+    left: auto; /* 居中显示 */
+    border-radius: 5px; /* 在移动设备上，边框半径可以稍微小一点 */
+  }
+
+  .chat-box {
+    max-height: 260px; /* 在小屏幕上，最大高度可以适当减小 */
+  }
+
+  .input-area {
+    flex-direction: column; /* 在小屏幕上，将输入区域变为垂直排列 */
+  }
+
+  .input-area input {
+    width: calc(100% - 20px); /* 输入框宽度为容器宽度减去padding */
+    margin-bottom: 10px; /* 在按钮上方留出空间 */
+  }
+
+  .input-area button {
+    width: 100%; /* 按钮宽度为100% */
+  }
+
+  .chat-icon {
+    bottom: 10px; /* 调整图标的位置 */
+    right: 10px;
+  }
+
+  /* 自动补全建议在移动端的样式调整 */
+  .autocomplete-suggestions {
+    top: 100%; /* 建议框位于输入框下方 */
+    left: 0;
+    right: 0;
+    max-height: 300px; /* 在小屏幕上，最大高度可以适当减小 */
+  }
+}

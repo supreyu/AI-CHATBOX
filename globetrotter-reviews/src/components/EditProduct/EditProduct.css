@@ -1,0 +1,35 @@
+
+/* src/components/EditProduct/EditProduct.css */
+.product-table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.product-table th {
+  background-color: #f2f2f2;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.edit-btn:before {
+  content: '✏️'; /* 或者使用相应的图标 */
+  margin-right: 10px;
+}
+
+.delete-btn:before {
+  content: '🗑️'; /* 或者使用相应的图标 */
+  margin-right: 10px;
+}
+
+  

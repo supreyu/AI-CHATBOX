@@ -1,0 +1,113 @@
+
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 将内容左对齐 */
+  margin: 50px; /* 统一距离四周的位置 */
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.product-cover-and-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%; /* 让封面和信息占满容器宽度 */
+}
+
+.product-cover {
+  max-width: 200px;
+  height: auto;
+}
+
+.product-info {
+  flex: 1; 
+}
+
+.product-actions .button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 0 10px; /* 左右外边距为10px */
+}
+
+/* 也可以分别为每个按钮设置外边距 */
+.product-actions .button:first-child {
+  margin-right: 10px; /* 仅为第一个按钮设置右边距 */
+}
+
+.product-actions .button:last-child {
+  margin-left: 10px; /* 仅为最后一个按钮设置左边距 */
+}
+
+.product-comments-section {
+  width: 100%; /* 让评论区占满容器宽度 */
+  margin-top: 20px;
+}
+
+.comment {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-form {
+  margin-top: 20px;
+  width: 100%; /* 让评论输入框和评分下拉框占满容器宽度 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+
+.comment-form textarea {
+  width: 100%;
+  height: 150px; /* 调整输入框高度 */
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  resize: none;
+  font-size: 18px;
+  box-sizing: border-box; /* 让内边距和边框不增加输入框尺寸 */
+}
+
+.comment-form textarea:focus {
+  border-color: #007bff; /* 聚焦时的边框颜色 */
+  outline: none; /* 移除聚焦时的虚线边框 */
+}
+
+
+
+.comment-form select {
+  width: 40%;
+  height: 60px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+}
+
+.comment-form button {
+  width: 40%;
+  height: 60px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #0056b3;
+}
+
+  
